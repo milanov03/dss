@@ -84,7 +84,7 @@ const App: React.FC = () => {
           selectedGrade={selectedGrade}
         />
       </div>
-      <div className="footer">DSS GRADES</div>
+      <div className="footer">DSS GRADES - Milan Milanov TM</div>
     </div>
   );
 };
