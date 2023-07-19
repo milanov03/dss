@@ -38,7 +38,8 @@ const GradeDetails: React.FC<Props> = (props: Props) => {
 
   const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
-    setGrade(prevGrade => ({ ...prevGrade, publicationDate: new Date(value) }));
+    console.log(value);
+    setGrade(prevGrade => ({ ...prevGrade, date: new Date(value) }));
   };
 
   const handleSubmit = (e: FormEvent) => {
@@ -61,6 +62,7 @@ const GradeDetails: React.FC<Props> = (props: Props) => {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="studentFirstName">Student's first name:</label>
+          <br/>
           <input
             type="text"
             id="field1"
@@ -72,6 +74,7 @@ const GradeDetails: React.FC<Props> = (props: Props) => {
         </div>
         <div>
           <label htmlFor="studentLastName">Student's last name:</label>
+          <br/>
           <input
             type="text"
             id="field2"
@@ -83,6 +86,7 @@ const GradeDetails: React.FC<Props> = (props: Props) => {
         </div>
         <div>
           <label htmlFor="subject">Subject:</label>
+          <br/>
           <input
             type="text"
             id="field3"
@@ -94,6 +98,7 @@ const GradeDetails: React.FC<Props> = (props: Props) => {
         </div>
         <div>
           <label htmlFor="score">Score:</label>
+          <br/>
           <input
             type="score"
             id="field4"
@@ -105,6 +110,7 @@ const GradeDetails: React.FC<Props> = (props: Props) => {
         </div>
         <div>
           <label htmlFor="date">Date:</label>
+          <br/>
           <input
             type="date"
             id="field5"
